@@ -1,0 +1,24 @@
+[package]
+name = "wicker"
+version = "0.1.0"
+authors = ["sunny-g <sunny.gonna@gmail.com>"]
+edition = "2018"
+
+[lib]
+name = "wicker"
+path = "src/lib.rs"
+
+[[bin]]
+name = "wicker"
+path = "src/bin/main.rs"
+
+[dependencies]
+async-std = "1.4"
+env_logger = "^0.7"
+failure = { version = "0.1", features = ["derive"] }
+futures = "0.3"
+lazy_static = "1"
+log = { version = "0.4.8", default-features = false }
+lucet-runtime = { version = "^0.5", git = "https://github.com/sunny-g/lucet", branch = "patch-1" }
+structopt = "0.2"
+wasi-common = "^0.8"
